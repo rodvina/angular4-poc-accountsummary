@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  successrate = 10;
+  inforate = 22;
+  warningrate = 78;
+  dangerrate = 5;
 }
