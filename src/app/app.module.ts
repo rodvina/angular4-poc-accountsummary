@@ -1,4 +1,4 @@
-import { AccountServiceService } from './account-service.service';
+import { AccountSummaryService } from './account-summary.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -24,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [AccountServiceService],
+  providers: [AccountSummaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

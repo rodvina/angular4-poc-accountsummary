@@ -1,4 +1,4 @@
-import { AccountServiceService } from '../account-service.service';
+import { AccountSummaryService } from '../account-summary.service';
 import { Response } from '@angular/http';
 import { Subscription } from 'rxjs/Rx';
 import { data_accountSummary, data_accountSummary_Diep, data_accountSummary_Rodney, IAccountSummary } from '../app.common';
@@ -25,7 +25,7 @@ export class AccountSummaryComponent implements OnInit {
   // customerid$: Observable<string>;
   theCustomerId: string;
 
-  constructor(route: ActivatedRoute, service: AccountServiceService) {
+  constructor(route: ActivatedRoute, service: AccountSummaryService) {
     console.log('constructing account summary...');
     // need to get the account summary for this customer
     // this.accountSummary$ = route.params
@@ -44,7 +44,6 @@ export class AccountSummaryComponent implements OnInit {
       .switchMap((id: string) => service.getAccountSummary(id))
       .share();
 
-    
    }
 
   ngOnInit() {

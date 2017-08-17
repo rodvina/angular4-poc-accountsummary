@@ -11,7 +11,10 @@ export interface IPolicy {
     premium: string;
     effectiveDate: string;
     expirationDate: string;
-    policyType: string;
+    address: IAddress;
+    policyType?: string;
+    packageInd?: boolean;
+
 }
 
 export interface IPolicySummary {
@@ -33,6 +36,12 @@ export const data_search_results = [
      'Warren',
      'Diep'
 ];
+export const data_address = {
+        street: '505 Main Street',
+        city: 'New York',
+        state: 'NY',
+        zip: '38329'
+};
 
 export const data_policy1: IPolicy = {
     policyNumber: '1928343301',
@@ -40,7 +49,8 @@ export const data_policy1: IPolicy = {
     policyType: 'auto',
     effectiveDate: '01/01/2018',
     expirationDate: '06/01/2018',
-    premium: '458.22'
+    premium: '458.22',
+    address: data_address
 };
 
 export const data_policy2 = {
@@ -49,16 +59,14 @@ export const data_policy2 = {
     policyType: 'home',
     effectiveDate: '01/01/2018',
     expirationDate: '12/01/2018',
-    premium: '1458.22'
+    premium: '1458.22',
+    address: data_address
 };
 
+
+
 export const data_policySummary = {
-    address: {
-        street: '505 Main Street',
-        city: 'New York',
-        state: 'NY',
-        zip: '38329'
-    },
+    address: data_address,
     policy: data_policy1
 };
 
