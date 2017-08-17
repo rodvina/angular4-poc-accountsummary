@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col 6">
+    <div class="card-content" *ngIf="accountSummary$ | async as accountSummary1; else loadingAccountSummary">
+      <h2>Account Summary for {{ theCustomerId  }} </h2>
+      <div >
+        <div>
+          AccountNumber: {{accountSummary1.accountNumber}}
+        </div>
+        <div>
+          Insured Name: {{accountSummary1.insuredName}}
+        </div>
+      </div> 
+      <ng-template #loadingAccountSummary>
+        Loading account summary...
+      </ng-template>     
+      <!-- this would not work, so used *ngIf to assign observable to variable
+        <div>
+        AccountNumber: {{(accountSummary$ | async)?.accountNumber}}
+      </div>  
+      <div>
+        Insured Name: {{(accountSummary$ | async)?.insuredName}}
+      </div> -->
+      <h3>Policies</h3>
+      <p *ngFor="let policy of accountSummary1.policies">
+        <app-policy [policy]="policy"></app-policy>
+      </p>
+
+      <a [routerLink]="['/customers']">Back to list</a>
+  </div>
+  </div>
+</div>

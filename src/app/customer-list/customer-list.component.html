@@ -1,3 +1,10 @@
-<ul>
-    <li *ngFor="let customer of customers">{{customer}}</li>
-</ul>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Select Customer</div>
+    <p *ngFor="let customer of customers">
+      <a [routerLink]="['/customer', customer]">
+        {{customer}}
+      </a>
+    </p>
+  </div>
+</section>

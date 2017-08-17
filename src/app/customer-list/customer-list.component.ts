@@ -1,3 +1,4 @@
+import { data_search_results } from '../app.common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerListComponent implements OnInit {
 
-  customers: string[] = [
-    'Rodney',
-    'Bob'
-  ];
+  customers: string[] = data_search_results;
 
   constructor() {
 
