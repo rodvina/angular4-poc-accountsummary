@@ -13,13 +13,16 @@
       <ng-template #loadingAccountSummary>
         Loading account summary...
       </ng-template>     
-      <!-- this would not work, so used *ngIf to assign observable to variable
+       <!-- this would not work, so used *ngIf to assign observable to variable -->
+       <div>
+        AccountNumber: {{(accountSummary$ | async | json)}}
+      </div>
         <div>
-        AccountNumber: {{(accountSummary$ | async)?.accountNumber}}
+        AccountNumber: {{(accountSummary$ | async)?.accountNumber}} 
       </div>  
       <div>
         Insured Name: {{(accountSummary$ | async)?.insuredName}}
-      </div> -->
+      </div> 
       <h3>Policies</h3>
       <p *ngFor="let policy of accountSummary1.policies">
         <app-policy [policy]="policy"></app-policy>

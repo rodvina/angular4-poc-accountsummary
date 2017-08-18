@@ -33,14 +33,55 @@ export interface IAccountSummary {
  */
 export const data_search_results = [
     'Rodney',
-     'Warren',
-     'Diep'
+    'Warren',
+    'Diep'
 ];
+
+export const data_searchResults = [
+    {
+        customerId: 'tmorris0',
+        accountNumber: '10079879',
+        firstName: 'Todd',
+        lastName: 'Morris',
+        insuredName: 'Todd Morris',
+        address: {
+            street: '555 Main St',
+            city: 'Dallas',
+            state: 'TX',
+            zip: '33433'
+        },
+        policyNumber: '1007987901',
+        policyType: 'auto',
+        policyStatus: 'bound',
+        policyEffectiveDate: '01/01/2018',
+        policyExpirationDate: '06/01/2018',
+        producerCode: '04109600'
+    },
+    {
+        customerId: 'rodvina',
+        accountNumber: '34892211',
+        firstName: 'Rodney',
+        lastName: 'Odvina',
+        insuredName: 'Rodney Odvina',
+        address: {
+            street: '469 Main St',
+            city: 'Jacksonville',
+            state: 'FL',
+            zip: '32216'
+        },
+        policyNumber: '3489221101',
+        policyType: 'auto',
+        policyStatus: 'bound',
+        policyEffectiveDate: '01/01/2018',
+        policyExpirationDate: '06/01/2018',
+        producerCode: '04109600'
+    }
+]
 export const data_address = {
-        street: '505 Main Street',
-        city: 'New York',
-        state: 'NY',
-        zip: '38329'
+    street: '505 Main Street',
+    city: 'New York',
+    state: 'NY',
+    zip: '38329'
 };
 
 export const data_policy1: IPolicy = {
