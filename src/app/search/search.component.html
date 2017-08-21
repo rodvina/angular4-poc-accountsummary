@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [hidden]="submitted">
     <h1>Search Form</h1>
     <form (ngSubmit)="onSubmit()"  #search="ngForm">
       {{diagnostic}}
@@ -32,4 +32,21 @@
       <button type="submit" class="btn btn-success" [disabled]="!search.form.valid">Submit</button>
  
     </form>
+</div>
+<div class="container" [hidden]="!submitted">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">First Name: </div>
+    <div class="col-xs-9  pull-left">{{ model.firstName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Last Name: </div>
+    <div class="col-xs-9 pull-left">{{ model.lastName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Policy Type: </div>
+    <div class="col-xs-9 pull-left">{{ model.policyType }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
 </div>
