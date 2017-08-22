@@ -1,4 +1,4 @@
-import { data_search_results } from '../app.common';
+import { data_search_results } from '../data-model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

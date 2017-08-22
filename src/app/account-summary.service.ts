@@ -1,5 +1,5 @@
 import { Response } from '@angular/http';
-import { data_accountSummary, data_accountSummary_Diep, data_accountSummary_Rodney, IAccountSummary } from './app.common';
+import { data_accountSummary, data_accountSummary_Diep, data_accountSummary_Rodney, IAccountSummary } from './data-model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

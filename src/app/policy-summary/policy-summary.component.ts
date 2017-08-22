@@ -1,4 +1,4 @@
-import { IPolicy, IPolicySummary, data_policySummary } from '../app.common';
+import { IPolicy, IPolicySummary, data_policySummary } from '../data-model';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

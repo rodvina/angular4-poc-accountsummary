@@ -1,0 +1,43 @@
+<h1>Reactive Search Form</h1>
+<form (ngSubmit)="onSubmit()"  [formGroup]="searchForm" novalidate>
+  {{diagnostic}}
+  <div class="form-group">
+    <label for="policyNumber">Policy Number</label>
+    <input id="policyNumber" name="policyNumber" type="text" class="form-control" 
+        formControlName="policyNumber"
+        required>
+    dirty?: {{searchForm.get('policyNumber').dirty }}
+    touched?: {{searchForm.get('policyNumber').touched }}
+    invalid form?: {{searchForm.invalid}}
+  </div>
+  <div *ngIf="searchForm.invalid && (searchForm.get('policyNumber').dirty || searchForm.get('policyNumber').touched)"
+          class="alert alert-danger">
+    <div *ngIf="searchForm.get('policyNumber').hasError('required')" >
+      Policy number is required.
+    </div>
+    <div *ngIf="searchForm.get('policyNumber').hasError('minlength')" >
+      Policy number must be at least 10 digits long.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" formControlName="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" formControlName="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="policyType">Policy Type</label>
+    <select class="form-control" id="policyType" required formControlName="policyType">
+      <option *ngFor="let policyType of policyTypes" [value]="policyType">{{policyType}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!searchForm.valid">Submit</button>
+
+</form>
+<p>Form value: {{ searchForm.value | json }}</p>
+<p>Form status: {{ searchForm.status | json }}</p>

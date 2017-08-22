@@ -1,14 +1,5 @@
-<div class="row">
-
-  <div class="col s6">
-    <section class="card">
-      <div class="card-content" *ngIf="policy">
-        <div class="card-title"></div>
-        <div>Policy Number: <b>{{policy.policyNumber}}</b></div>
-        <div>Effective Date: <b>{{policy.effectiveDate}}</b></div>
-        <div>Expiration Date: <b>{{policy.expirationDate}}</b></div>
-      </div>
-    </section>
-  </div>
-
+<div class="card-content" *ngIf="policy">
+  <div>Policy Number: <b>{{policy.policyNumber}}</b></div>
+  <div>Effective Date: <b>{{policy.effectiveDate}}</b></div>
+  <div>Expiration Date: <b>{{policy.expirationDate}}</b></div>
 </div>

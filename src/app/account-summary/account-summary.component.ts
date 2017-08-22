@@ -1,7 +1,7 @@
 import { AccountSummaryService } from '../account-summary.service';
 import { Response } from '@angular/http';
 import { Subscription } from 'rxjs/Rx';
-import { data_accountSummary, data_accountSummary_Diep, data_accountSummary_Rodney, IAccountSummary } from '../app.common';
+import { data_accountSummary, data_accountSummary_Diep, data_accountSummary_Rodney, IAccountSummary } from '../data-model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';

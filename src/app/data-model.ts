@@ -28,6 +28,19 @@ export interface IAccountSummary {
     policies: IPolicy[];
 }
 
+export class Hero {
+  id = 0;
+  name = '';
+  addresses: Address[];
+}
+
+export class Address {
+  street = '';
+  city   = '';
+  state  = '';
+  zip    = '';
+}
+
 /*
  * Start of mock data
  */
@@ -76,7 +89,7 @@ export const data_searchResults = [
         policyExpirationDate: '06/01/2018',
         producerCode: '04109600'
     }
-]
+];
 export const data_address = {
     street: '505 Main Street',
     city: 'New York',
@@ -129,5 +142,10 @@ export const data_accountSummary_Rodney = {
     policies: [data_policy1]
 };
 
+export const data_states = [
+    'Florida',
+    'Georgia',
+    'New York'
+];
 
 

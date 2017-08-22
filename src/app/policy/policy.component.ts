@@ -1,5 +1,5 @@
 
-import { IPolicy, data_policy1 } from '../app.common';
+import { IPolicy, data_policy1 } from '../data-model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
